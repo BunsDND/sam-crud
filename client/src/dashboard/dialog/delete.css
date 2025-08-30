@@ -1,0 +1,82 @@
+.delete-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.delete-dialog-form {
+  background: #1e1e1e; /* dark background */
+  padding: 28px 24px;
+  border-radius: 16px;
+  min-width: 340px;
+  max-width: 90%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.delete-dialog-form h3 {
+  color: #ff4c4c;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.delete-dialog-form p {
+  margin-bottom: 28px;
+  font-size: 15px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.delete-dialog-form button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Delete button */
+.delete-dialog-form .delete-btn {
+  background: linear-gradient(135deg, #ff4c4c, #d32f2f);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.35);
+}
+.delete-dialog-form .delete-btn:hover {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  transform: translateY(-2px);
+}
+
+/* Cancel button */
+.delete-dialog-form .cancel-btn {
+  background: #2c2c2c;
+  color: #ddd;
+  border: 1px solid #444;
+}
+.delete-dialog-form .cancel-btn:hover {
+  background: #3a3a3a;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
