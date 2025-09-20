@@ -3,72 +3,74 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(10, 10, 10, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   z-index: 1000;
   animation: fadeIn 0.25s ease-out;
 }
 
 .delete-dialog-form {
-  background: #1e1e1e; /* dark background */
-  padding: 28px 24px;
-  border-radius: 16px;
+  background: linear-gradient(135deg, #181818 80%, #232323 100%);
+  padding: 36px 28px;
+  border-radius: 18px;
   min-width: 340px;
-  max-width: 90%;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  max-width: 95%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.8);
   text-align: center;
   animation: slideUp 0.3s ease-out;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid #222;
 }
 
 .delete-dialog-form h3 {
-  color: #ff4c4c;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 12px;
+  color: #ff5252;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
 }
 
 .delete-dialog-form p {
   margin-bottom: 28px;
-  font-size: 15px;
-  color: #ddd;
-  line-height: 1.5;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
 }
 
 .delete-dialog-form button {
-  padding: 10px 22px;
+  padding: 10px 26px;
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 14px;
-  margin: 0 6px;
+  font-size: 15px;
+  margin: 0 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
 
 /* Delete button */
 .delete-dialog-form .delete-btn {
-  background: linear-gradient(135deg, #ff4c4c, #d32f2f);
+  background: linear-gradient(135deg, #ff5252, #d32f2f);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.35);
+  box-shadow: 0 4px 16px rgba(229, 57, 53, 0.18);
 }
 .delete-dialog-form .delete-btn:hover {
-  background: linear-gradient(135deg, #d32f2f, #b71c1c);
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #b71c1c, #ff5252);
+  transform: scale(1.05);
 }
 
 /* Cancel button */
 .delete-dialog-form .cancel-btn {
-  background: #2c2c2c;
-  color: #ddd;
+  background: linear-gradient(135deg, #222, #333);
+  color: #fff;
   border: 1px solid #444;
 }
 .delete-dialog-form .cancel-btn:hover {
-  background: #3a3a3a;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #333, #444);
+  transform: scale(1.05);
 }
 
 /* Animations */
@@ -77,6 +79,6 @@
   to { opacity: 1; }
 }
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
+  from { transform: translateY(24px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }

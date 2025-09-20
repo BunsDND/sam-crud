@@ -1,15 +1,10 @@
 import React from 'react';
+import './add.css';
 
 function AddProductDialog({ form, onChange, onSubmit, onCancel }) {
   return (
-    <div style={{
-      position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-      background: 'rgba(0,0,0,0.3)', display: 'flex', alignItems: 'center', justifyContent: 'center'
-    }}>
-      <form
-        style={{ background: '#fff', padding: 20, borderRadius: 8, minWidth: 300 }}
-        onSubmit={onSubmit}
-      >
+    <div className="add-dialog-overlay">
+      <form className="add-dialog-form" onSubmit={onSubmit}>
         <h3>Add Product</h3>
         <input
           name="name"
@@ -17,7 +12,6 @@ function AddProductDialog({ form, onChange, onSubmit, onCancel }) {
           value={form.name}
           onChange={onChange}
           required
-          style={{ width: '100%', marginBottom: 8 }}
         />
         <input
           name="image"
@@ -25,7 +19,6 @@ function AddProductDialog({ form, onChange, onSubmit, onCancel }) {
           value={form.image}
           onChange={onChange}
           required
-          style={{ width: '100%', marginBottom: 8 }}
         />
         <input
           name="description"
@@ -33,7 +26,6 @@ function AddProductDialog({ form, onChange, onSubmit, onCancel }) {
           value={form.description}
           onChange={onChange}
           required
-          style={{ width: '100%', marginBottom: 8 }}
         />
         <input
           name="price"
@@ -42,7 +34,6 @@ function AddProductDialog({ form, onChange, onSubmit, onCancel }) {
           value={form.price}
           onChange={onChange}
           required
-          style={{ width: '100%', marginBottom: 8 }}
         />
         <input
           name="stock"
@@ -51,11 +42,10 @@ function AddProductDialog({ form, onChange, onSubmit, onCancel }) {
           value={form.stock}
           onChange={onChange}
           required
-          style={{ width: '100%', marginBottom: 8 }}
         />
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-          <button type="submit">Submit</button>
-          <button type="button" onClick={onCancel}>Cancel</button>
+        <div className="actions">
+          <button className="add-btn" type="submit">Submit</button>
+          <button className="cancel-btn" type="button" onClick={onCancel}>Cancel</button>
         </div>
       </form>
     </div>

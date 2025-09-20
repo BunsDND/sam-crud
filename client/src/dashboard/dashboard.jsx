@@ -44,7 +44,7 @@ function Products() {
         setForm({ name: '', image: '', description: '', price: '', stock: '' });
         fetchProducts();
       })
-      .catch(err => alert('Error adding product'));
+      .catch(alert => alert('Error adding product'));
   };
 
   const handleCancel = () => {
@@ -65,7 +65,7 @@ function Products() {
         setSelectedProduct(null);
         fetchProducts();
       })
-      .catch(err => alert('Error updating product'));
+      .catch(alert => alert('Error updating product'));
   };
 
   const handleUpdateCancel = () => {
@@ -86,7 +86,7 @@ function Products() {
         setSelectedProduct(null);
         fetchProducts();
       })
-      .catch(err => alert('Error deleting product'));
+      .catch(alert => alert('Error deleting product'));
   };
 
   const handleDeleteCancel = () => {
